@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="bek">
+
+      <div class="d-flex flex-row back">
+        <h1 class="hed">Learning 4.O</h1>
+        <div class="hb d-flex flex-column justify-content-center">
+          <div>
+        <h class="ih"  onclick="display('section1')"><a href="#"> Home</a></h>
+        <h class="ih" onclick="display('section4')"><a href="#">About</a></h>
+        <h class="ih" onclick="display('section5')"><a href="#">Contact us</a></h>
+          </div>
+      </div>
+    </div>
+    <div id="section1">
+      <div class="bb">
+
+        <p class="para">STAND OUT FROM THE <br>CROWD IN THE WAY<br> OF <span style="color:">LEARNING</span></p>
+        <p class="sp">we make the learning better with efficient data....</p>
+
+      <div class="d-flex flex-row justify-content-center">
+
+    <button class="bt" style="margin-right:auto;" onclick="display('section3')">
+      Login
+
+    </button>
+      <button class="bt" style="margin-right:auto" onclick="display('section2')">
+        Sign up
+
+      </button>
+         </div>
+      </div>
+      </div>
+  </div>
+
+
+
+
+  </div>
+  <div id="section3" style="background-color:#1085b7;>
+
+    <form id="loginForm"  autocomplete="on">
+      <div class="d-flex flex-column usr">
+        <h2 class="hed">Login</h2>
+        <div class="d-flex flex-column m-auto">
+
+        <label for="username" >Username:
+            <input type="text" id="username" name="username" required>
+        </label>
+
+        <label for="password">Password:
+            <input type="password" id="password" name="password" required>
+        </label>
+
+        <button onclick="display('section6')" type="submit" class="bt1">Login</button>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+
+
+  <div id="section2" class="d-flex flex-column usr" style="background-color:#1085b7">
+      <form id="signupForm" autocomplete="on">
+          <h2 class="hed">Sign Up</h2>
+        <div class="d-flex flex-column">
+
+          <label for="newUsername">Username:
+              <input type="text" id="newUsername" name="newUsername" required>
+          </label>
+
+          <label for="newPassword">Password:
+              <input type="password" id="newPassword" name="newPassword" required>
+          </label>
+
+          <label for="confirmPassword">Confirm Password:
+              <input type="password" id="confirmPassword" name="confirmPassword" required>
+          </label>
+
+          <button class="bt1" type="submit">Sign Up</button>
+        </div>
+      </form>
+    </div>
+
+  <div id="section4">
+  <div class="ppara">
+    <h class="hed">About</h>
+    <p>An efficient data-fetching model leveraging OpenAI's language models and the YouTube API could be designed by integrating these technologies into a cohesive system. The YouTube API facilitates real-time data retrieval from the platform, and a backend server manages the interaction between the API and OpenAI's language model, such as GPT-3. Users interact with a frontend interface, inputting queries or topics of interest. The system fetches YouTube data, processes it with the language model, and presents generated text to users. To ensure privacy, data security, and compliance, developers must adhere to YouTube's API policies and ethical considerations. Continuous user feedback can be incorporated to enhance the model's accuracy and relevance over time. This integrated approach creates a dynamic system for efficiently generating insights from YouTube content.</p>
+  </div>
+    </div>
+  <div id="section5">
+    <h>Contact us</h>
+    <p class="ppara">I you have any question or feedback you can contact through <a href="#"><span style="font-weight:bolder">21pa1a1281@vishnu.edu.in</span></a> or <a href="#"><span 
+ style="font-weight:bolder;">21pa1a12c0@vishnu.edu.in</span></a></p>
+
+  </div>
+  <div id="section6">
+    <div class="ser">
+    <div class="d-flex flex-row justify-content-center">
+    <input class="sear" type="text" placeholder="Search..">
+      <div></div>
+    </div>
+    </div>
+    <div>
+      <p></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>

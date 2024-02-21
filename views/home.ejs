@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Learning 4.0</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+      }
+  
+      .bek {
+        background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+      }
+  
+      .back {
+        position: relative;
+        color: white;
+        font-weight: bold;
+        padding: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+  
+      .hb {
+        margin-left: auto;
+      }
+  
+      .ih {
+        margin: 15px;
+        color: white;
+      }
+  
+      .bt {
+        background-color: transparent;
+        color: #ffffff;
+        border: 4px solid #000000;
+        padding: 10px 15px 10px 15px;
+        border-radius: 20px;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 20px;
+        font-family: 'Bree Serif', serif;
+      }
+  
+      .hed {
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Bree Serif', serif;
+        color: white;
+      }
+  
+      .para {
+        font-size: 40px;
+        text-align: start;
+        font-family: 'Playfair Display', serif;
+        color: black;
+        font-weight: bold;
+        text-decoration: underline;
+        padding: 8vh 0 0 9vw;
+      }
+  
+      .sp {
+        color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        padding-left: 9vw;
+        font-size: 20px;
+      }
+  
+      .bb {
+        background-size: cover;
+        height: 90vh;
+      }
+  
+      .image {
+        height: 50vh;
+        position: relative;
+      }
+  
+      a {
+        color: white;
+      }
+      img{
+        position:absolute;
+        right:10%;
+        height:50%;
+        width:50%;
+      }
+      .gear-rotate{
+        width: 2em;
+        height: 2em;
+        top: 50%; 
+        left: 50%; 
+        margin-top: -1em;
+        margin-left: -1em;
+        background: #E9E581;
+        position: absolute;
+        border-radius: 1em;
+        -webkit-animation: 1s gear-rotate linear infinite;
+        -moz-animation: 1s gear-rotate linear infinite;
+        animation: 1s gear-rotate linear infinite;
+      }
+      #wrapper{
+          width: 100%;
+          max-width: 725px;
+          margin: 0px auto;
+      }
+      .gears{
+        width:48%;
+        position:absolute;
+        left:40%;
+        top:25%;
+        display: inline-block;
+      }
+      .gears:first-child{
+        margin-right: 3%;
+      }
+      .gears-container{
+          width:150px; 
+          height: 150px;
+          font-size:24px;
+          padding: 9%;
+          position: relative; 
+          margin: 0px auto;
+      }
+      
+      .gear-rotate{
+        width: 2em;
+        height: 2em;
+        top: 50%; 
+        left: 50%; 
+        margin-top: -1em;
+        margin-left: -1em;
+        background: #E9E581;
+        position: absolute;
+        border-radius: 1em;
+        -webkit-animation: 1s gear-rotate linear infinite;
+        -moz-animation: 1s gear-rotate linear infinite;
+        animation: 1s gear-rotate linear infinite;
+      }
+      .gear-rotate-left{
+        margin-top: -2.2em;
+        top: 50%;
+        width: 2em;
+        height: 2em;
+        background: #E9E581;
+        position: absolute;
+        border-radius: 1em;
+        -webkit-animation: 1s gear-rotate-left linear infinite;
+        -moz-animation: 1s gear-rotate-left linear infinite;
+        animation: 1s gear-rotate-left linear infinite;
+      }
+
+      .gear-rotate::before, .gear-rotate-left::before {
+        width: 2.8em;
+        height: 2.8em;
+        background: 
+          -webkit-linear-gradient(0deg,transparent 39%,#E9E581 39%,#E9E581 61%, transparent 61%),
+          -webkit-linear-gradient(60deg,transparent 42%,#E9E581 42%,#E9E581 58%, transparent 58%),
+          -webkit-linear-gradient(120deg,transparent 42%,#E9E581 42%,#E9E581 58%, transparent 58%);
+        background: 
+          -moz-linear-gradient(0deg,transparent 39%,#E9E581 39%,#47EC19 61%, transparent 61%),
+          -moz-linear-gradient(60deg,transparent 42%,#E9E581 42%,#E9E581 58%, transparent 58%),
+          -moz-linear-gradient(120deg,transparent 42%,#E9E581 42%,#E9E581 58%, transparent 58%);
+        background: 
+          -o-linear-gradient(0deg,transparent 39%,#E9E581 39%,#E9E581 61%, transparent 61%),
+          -o-linear-gradient(60deg,transparent 42%,#E9E581 42%,#E9E581 58%, transparent 58%),
+          -o-linear-gradient(120deg,transparent 42%,#47EC19 42%,#E9E581 58%, transparent 58%);
+        background: -ms-linear-gradient(0deg,transparent 39%,#E9E581 39%,#E9E581 61%, transparent 61%),-ms-linear-gradient(60deg,transparent 42%,#E9E581 42%,#E9E581 58%, transparent 58%),-ms-linear-gradient(120deg,transparent 42%,#E9E581 42%,#E9E581 58%, transparent 58%);
+        background: 
+            linear-gradient(0deg,transparent 39%,#E9E581 39%,#E9E581 61%, transparent 61%),
+          linear-gradient(60deg,transparent 42%,#E9E581 42%,#E9E581 58%, transparent 58%),
+          linear-gradient(120deg,transparent 42%,#E9E581 42%,#E9E581 58%, transparent 58%);
+        position: absolute;
+        content:"";
+        top: -.4em;
+        left: -.4em;
+        border-radius:1.4em;
+      }
+      .gear-rotate::after, .gear-rotate-left::after {
+        width: 1em;
+        height: 1em;
+        background: #2B2B2B;
+        position: absolute;
+        content:"";
+        top: .5em;
+        left: .5em;
+        border-radius: .5em;
+      }
+
+      /*
+       * Keyframe Animations 
+       */ 
+
+      @-webkit-keyframes gear-rotate {
+        0% { 
+          -webkit-transform: rotate(0deg);
+        }
+        100% { 
+          -webkit-transform: rotate(-180deg); 
+        }
+      }
+
+      @-moz-keyframes gear-rotate {
+        0% { 
+          transform: rotate(0deg);
+        }
+        100% { 
+          transform: rotate(-180deg); 
+        }
+      }
+
+      @keyframes gear-rotate {
+        0% { 
+          transform: rotate(0deg); 
+        }
+        100% { 
+          transform: rotate(-180deg); 
+        }
+      }
+
+      @-webkit-keyframes gear-rotate-left {
+       0% {
+         -webkit-transform: rotate(30deg); 
+        }
+        100% {
+          -webkit-transform: rotate(210deg);
+        }
+      }
+
+      @-moz-keyframes gear-rotate-left {
+       0% { 
+         -webkit-transform: rotate(30deg); 
+        }
+        100% { 
+          -webkit-transform: rotate(210deg);
+        }
+      }
+
+      @keyframes gear-rotate-left {
+       0% { 
+         -webkit-transform: rotate(30deg); 
+        }
+        100% { 
+          -webkit-transform: rotate(210deg);
+        }
+      }
+    </style>
+</head>
+
+<body>
+  
+  <div class="bek">
+    <div class="d-flex flex-row back">
+      <h1 class="hed">Learning 4.O</h1>
+      <div class="hb d-flex flex-column justify-content-center">
+        <div>
+          <h class="ih" onclick="display('section1')"><a href="#"> Home</a></h>
+          <h class="ih" onclick="display('section4')"><a href="#">About</a></h>
+          <h class="ih" onclick="display('section5')"><a href="#">Contact us</a></h>
+        </div>
+      </div>
+    </div>
+   <div>
+       
+     
+     <img src="https://cdn.glitch.global/a2e8e3d6-3d7b-49dc-9c90-06567f33521f/Robot-Hand-PNG.png?v=1706775880871">
+
+     <div class="gears" id="two-gears">
+
+        <div class="gears-container">
+          <div class="gear-rotate"></div>
+          <div class="gear-rotate-left"></div>
+        </div>
+
+
+
+      </div>
+     
+   </div>
+      
+    <div id="section1">
+      <div class="bb">
+        <p class="para">STAND OUT FROM THE <br>CROWD IN THE WAY<br> OF <span style="color:">LEARNING</span></p>
+        <p class="sp">we make the learning better with efficient data....</p>
+        <div class="d-flex flex-row justify-content-start">
+          <a href="https://ad034146-ec9d-4d46-8356-9b12a6251919-00-89xkrbdzs3cx.worf.replit.dev/login"><button class="bt" style="margin-left:130px;">Login</button></a>
+          <a href="https://ad034146-ec9d-4d46-8356-9b12a6251919-00-89xkrbdzs3cx.worf.replit.dev/register"><button class="bt" style="margin-left:100px;">Sign up</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+
+</html>
